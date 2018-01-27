@@ -1,4 +1,4 @@
-﻿;;;======================================================
+;;;======================================================
 ;;;     Housing Recommendation Expert System
 ;;;
 ;;;     This engine will help prospective house buyers
