@@ -442,6 +442,7 @@ Class CLIPSNET.Environment: AutoLayout, AnsiClass, Class, Public, BeforeFieldIni
     Clear(): PrivateScope, Public, HideBySig
     Load(String): PrivateScope, Public, HideBySig
     LoadFromString(String): PrivateScope, Public, HideBySig
+    LoadFromResource(Byte[]): PrivateScope, Public, HideBySig
     LoadFromResource(String, String): PrivateScope, Public, HideBySig
     Build(String): PrivateScope, Public, HideBySig
     Reset(): PrivateScope, Public, HideBySig
