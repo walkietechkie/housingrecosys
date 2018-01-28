@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using CLIPSNET;
+using HousingRecommendationSystem.Models;
 
 namespace HousingRecommendationSystem.Controllers
 {
@@ -15,6 +16,7 @@ namespace HousingRecommendationSystem.Controllers
         public ActionResult Index()
         {
             InitializeClips();
+            ViewBag.Message = GetState();
             return View();
         }
 
@@ -35,7 +37,20 @@ namespace HousingRecommendationSystem.Controllers
         private void InitializeClips()
         {
             clips.LoadFromResource(Properties.Resources.recommendation_engine);
+            clips.LoadFromResource(Properties.Resources.recommendation_engine_def);
             clips.Reset();
+            clips.Run();
+        }
+
+        private QuestionAndAnswer GetState()
+        {
+            String evalStr = "(find-fact ((?f UI-state)) TRUE)";
+            FactAddressValue fv = (FactAddressValue)((MultifieldValue)clips.Eval(evalStr))[0];
+
+            return new QuestionAndAnswer
+            {
+                Question = fv["display"].ToString()
+            };
         }
     }
 }

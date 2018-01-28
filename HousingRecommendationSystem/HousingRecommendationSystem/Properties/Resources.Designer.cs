@@ -69,5 +69,15 @@ namespace HousingRecommendationSystem.Properties {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] recommendation_engine_def {
+            get {
+                object obj = ResourceManager.GetObject("recommendation_engine_def", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
