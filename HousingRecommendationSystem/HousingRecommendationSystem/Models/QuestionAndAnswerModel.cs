@@ -5,9 +5,11 @@ using System.Web;
 
 namespace HousingRecommendationSystem.Models
 {
-    public class QuestionAndAnswer
+    public class QuestionAndAnswerModel
     {
         public string Question { get; set; }
-        public object [] Answer { get; set; }
+        public IEnumerable<AnswerModel> Answers { get; set; }
+
+        public string SelectedAnswer { get; set; }
     }
 }

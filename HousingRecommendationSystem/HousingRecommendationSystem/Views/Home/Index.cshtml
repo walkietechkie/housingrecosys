@@ -1,8 +1,8 @@
-﻿@using HousingRecommendationSystem.Models
+﻿@model HousingRecommendationSystem.Models.QuestionAndAnswerModel
 
-@{
+@using (Html.BeginForm())
+{
     ViewBag.Title = "Home Page";
-}
 
 <div class="jumbotron">
     <h1>Housing Recommendation System</h1>
@@ -10,7 +10,16 @@
         var data = ViewBag.Message;
     }
     <p class="lead">Q: @data.Question</p>
+
+    @{
+        foreach (var answer in @data.Answers)
+        {
+            @Html.RadioButtonFor(model => answer, new { id = answer.AnswerId, value = answer.DisplayText })
+            <label for="@answer.AnswerId">@answer.DisplayText</label>
+        }
+    }
 </div>
 
 <div class="row">
 </div>
+}

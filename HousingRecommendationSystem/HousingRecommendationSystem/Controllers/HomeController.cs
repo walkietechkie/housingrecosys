@@ -42,15 +42,31 @@ namespace HousingRecommendationSystem.Controllers
             clips.Run();
         }
 
-        private QuestionAndAnswer GetState()
+        private QuestionAndAnswerModel GetState()
         {
-            String evalStr = "(find-fact ((?f UI-state)) TRUE)";
-            FactAddressValue fv = (FactAddressValue)((MultifieldValue)clips.Eval(evalStr))[0];
+            var evalStr = Properties.Resources.FindFact;
+            var fv = (FactAddressValue)((MultifieldValue)clips.Eval(evalStr))[0];
 
-            return new QuestionAndAnswer
+            return new QuestionAndAnswerModel
             {
-                Question = fv["display"].ToString()
+                Question = fv["display"].ToString(),
+                Answers = GetAnswerChoices(fv)
             };
+        }
+
+        private IEnumerable<AnswerModel> GetAnswerChoices(FactAddressValue fact)
+        {
+            var answers = new List<AnswerModel>();
+            var displayTexts = (MultifieldValue) fact["display-answers"];
+            var answerIds = (MultifieldValue)fact["valid-answers"];
+
+            int iterator = 0;
+            foreach (LexemeValue choice in displayTexts)
+            {
+                answers.Add(new AnswerModel(choice.Value, ((LexemeValue) answerIds[iterator]).Value));
+            }
+
+            return answers;
         }
     }
 }

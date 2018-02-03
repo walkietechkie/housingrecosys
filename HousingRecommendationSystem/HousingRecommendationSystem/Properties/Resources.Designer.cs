@@ -61,6 +61,15 @@ namespace HousingRecommendationSystem.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to (find-fact ((?f UI-state)) TRUE).
+        /// </summary>
+        internal static string FindFact {
+            get {
+                return ResourceManager.GetString("FindFact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] recommendation_engine {
