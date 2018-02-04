@@ -1,6 +1,6 @@
 ﻿@model HousingRecommendationSystem.Models.QuestionAndAnswerModel
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("SubmitAnswer", "Home", FormMethod.Post))
 {
     ViewBag.Title = "Home Page";
 
@@ -14,10 +14,12 @@
     @{
         foreach (var answer in @data.Answers)
         {
-            @Html.RadioButtonFor(model => answer, new { id = answer.AnswerId, value = answer.DisplayText })
+            @Html.RadioButtonFor(model => model.SelectedAnswer, (string) answer.AnswerId, new {@id = answer.AnswerId})
             <label for="@answer.AnswerId">@answer.DisplayText</label>
         }
     }
+    <br/>
+    <input type="submit" value="Next"/>
 </div>
 
 <div class="row">

@@ -20,6 +20,14 @@ namespace HousingRecommendationSystem.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult SubmitAnswer(QuestionAndAnswerModel qAModel)
+        {
+            // todo: retrieve answer and pass back to clips
+            // then get state again to process next rule
+            return RedirectToAction("Index");
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -46,7 +54,7 @@ namespace HousingRecommendationSystem.Controllers
         {
             var evalStr = Properties.Resources.FindFact;
             var fv = (FactAddressValue)((MultifieldValue)clips.Eval(evalStr))[0];
-
+            var state = fv["state"];
             return new QuestionAndAnswerModel
             {
                 Question = fv["display"].ToString(),
@@ -63,7 +71,7 @@ namespace HousingRecommendationSystem.Controllers
             int iterator = 0;
             foreach (LexemeValue choice in displayTexts)
             {
-                answers.Add(new AnswerModel(choice.Value, ((LexemeValue) answerIds[iterator]).Value));
+                answers.Add(new AnswerModel(choice.Value, ((LexemeValue) answerIds[iterator++]).Value));
             }
 
             return answers;
