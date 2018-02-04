@@ -30,14 +30,14 @@ namespace HousingRecommendationSystem.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Housing Recommendation System";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "We will be reachable at";
 
             return View();
         }
