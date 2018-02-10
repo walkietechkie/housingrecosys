@@ -98,8 +98,9 @@
    
 
 (defrule starter
-;; no condition for this rule - hence always fire
-=>	(bind ?answers (create$ no yes))
+   (not (has-budget ?))
+
+=> (bind ?answers (create$ no yes))
    (handle-state interview
                  ?*target*
                  (find-text-for-id HasBudgetLevel0)
@@ -109,11 +110,15 @@
                  (translate-av ?answers)))
 
 ;; simple check for now
-(defrule condo-able
+(defrule condo-able ""
+	(declare (salience 10))
 	(has-budget yes) 
-=>	(handle-state conclusion ?*target* (find-text-for-id HasBudgetLevelY)))
+=>	
+	(handle-state conclusion ?*target* (find-text-for-id HasBudgetLevelY)))
 
 ;;; Go get some HDB
-(defrule buy-hdb
+(defrule buy-hdb ""
+	(declare (salience 10))
 	(has-budget no) 
-=>	(handle-state conclusion ?*target* (find-text-for-id HasBudgetLevelN)))
+=>	
+	(handle-state conclusion ?*target* (find-text-for-id HasBudgetLevelN)))

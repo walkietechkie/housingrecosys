@@ -7,6 +7,7 @@ namespace HousingRecommendationSystem.Models
 {
     public class QuestionAndAnswerModel
     {
+        public string QuestionId { get; set; }
         public string Question { get; set; }
         public IEnumerable<AnswerModel> Answers { get; set; }
 
