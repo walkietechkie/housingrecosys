@@ -61,6 +61,15 @@ namespace HousingRecommendationSystem.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to (assert ({0} {1})).
+        /// </summary>
+        internal static string AssertAnswer {
+            get {
+                return ResourceManager.GetString("AssertAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to (find-fact ((?f UI-state)) TRUE).
         /// </summary>
         internal static string FindFact {

@@ -16,6 +16,7 @@
         {
             @Html.RadioButtonFor(model => model.SelectedAnswer, (string) answer.AnswerId, new {@id = answer.AnswerId})
             <label for="@answer.AnswerId">@answer.DisplayText</label>
+            @Html.Hidden("QuestionId", (string) data.QuestionId)
         }
     }
     <br/>
