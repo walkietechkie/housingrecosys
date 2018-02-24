@@ -13,8 +13,8 @@ namespace HousingRecommendationSystem.Models
             AnswerId = answerId;
         }
 
-        public string DisplayText { get; set;  }
-        public string AnswerId { get; set; }
+        public string DisplayText { get; }
+        public string AnswerId { get; }
 
         public bool IsSelected { get; set; }
     }

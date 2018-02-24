@@ -117,26 +117,79 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AssertAnswer" xml:space="preserve">
-    <value>(assert ({0} {1}))</value>
+  <data name="AddGasRepair" xml:space="preserve">
+    <value>Suggested Repair: Add gas.</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ExpSysResources" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ExpSysResources.resx;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="AdjustTimingRepair" xml:space="preserve">
+    <value>Suggested Repair: Adjust timing.</value>
   </data>
-  <data name="FindFact" xml:space="preserve">
-    <value>(find-fact ((?f UI-state)) TRUE)</value>
+  <data name="BatteryQuestion" xml:space="preserve">
+    <value>Is the battery charged?</value>
   </data>
-  <data name="FindStateList" xml:space="preserve">
-    <value>(find-all-facts ((?f state-list)) TRUE)</value>
+  <data name="CleanPointsRepair" xml:space="preserve">
+    <value>Suggested Repair: Clean the points.</value>
   </data>
-  <data name="recommendation_engine" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Clips\recommendation_engine.clp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="CoilQuestion" xml:space="preserve">
+    <value>Is the conductivity test for the ignition coil positive?</value>
   </data>
-  <data name="recommendation_engine_def" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Clips\recommendation_engine_def.clp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="CoilRepair" xml:space="preserve">
+    <value>Suggested Repair: Replace the ignition coil.</value>
   </data>
-  <data name="Resources" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Resources.resx;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="FuelLineRepair" xml:space="preserve">
+    <value>Suggested Repair: Clean the fuel line.</value>
+  </data>
+  <data name="GasQuestion" xml:space="preserve">
+    <value>Does the tank have any gas in it?</value>
+  </data>
+  <data name="KnockQuestion" xml:space="preserve">
+    <value>Does the engine knock?</value>
+  </data>
+  <data name="LeadWireRepair" xml:space="preserve">
+    <value>Suggested Repair: Replace the distributor lead wire.</value>
+  </data>
+  <data name="MechanicRepair" xml:space="preserve">
+    <value>Suggested Repair: Take your car to a mechanic.</value>
+  </data>
+  <data name="MisfireQuestion" xml:space="preserve">
+    <value>Does the engine misfire?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoRepair" xml:space="preserve">
+    <value>Suggested Repair: None.</value>
+  </data>
+  <data name="OutputQuestion" xml:space="preserve">
+    <value>Is the output of the engine low?</value>
+  </data>
+  <data name="PointGapRepair" xml:space="preserve">
+    <value>Suggested Repair: Adjust point gap.</value>
+  </data>
+  <data name="PointsQuestion" xml:space="preserve">
+    <value>What is the surface state of the points?</value>
+  </data>
+  <data name="ReplaceBatteryRepair" xml:space="preserve">
+    <value>Suggested Repair: Charge the battery.</value>
+  </data>
+  <data name="ReplacePointsRepair" xml:space="preserve">
+    <value>Suggested Repair: Replace the points.</value>
+  </data>
+  <data name="RotateQuestion" xml:space="preserve">
+    <value>Does the engine rotate?</value>
+  </data>
+  <data name="RunQuestion" xml:space="preserve">
+    <value>Does the engine run normally?</value>
+  </data>
+  <data name="SluggishQuestion" xml:space="preserve">
+    <value>Is the engine sluggish?</value>
+  </data>
+  <data name="StartQuestion" xml:space="preserve">
+    <value>Does the engine start?</value>
+  </data>
+  <data name="WelcomeMessage" xml:space="preserve">
+    <value>Welcome to the Engine Diagnosis Expert System.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
   </data>
 </root>

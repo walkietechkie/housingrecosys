@@ -2,6 +2,7 @@ using HousingRecommendationSystem.Models;
 using System;
 
 using Unity;
+using Unity.Lifetime;
 
 namespace HousingRecommendationSystem
 {
@@ -43,7 +44,9 @@ namespace HousingRecommendationSystem
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
-            container.RegisterType<IClipsAdapter, ClipsAdapter>();
+            container.RegisterType<IClipsAdapter, ClipsAdapter>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IFileManager, FileManager>(new ContainerControlledLifetimeManager());
+
         }
     }
 }

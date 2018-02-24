@@ -9,7 +9,6 @@ namespace HousingRecommendationSystem.Controllers
 {
     public class HomeController : Controller
     {
-        private CLIPSNET.Environment _clips = new CLIPSNET.Environment();
         private readonly IClipsAdapter _clipsAdapter;
 
         public HomeController(IClipsAdapter clipsAdapter)
@@ -27,7 +26,7 @@ namespace HousingRecommendationSystem.Controllers
         {
             // todo: retrieve answer and pass back to clips
             // then get state again to process next rule
-            ProcessAnswer(qAModel);
+            _clipsAdapter.EvaluateQuestionAndAnswer(qAModel);
             return RedirectToAction("Index");
         }
 
@@ -45,34 +44,9 @@ namespace HousingRecommendationSystem.Controllers
             return View();
         }
 
-        protected override void Initialize(RequestContext requestContext)
-        {
-            InitializeClips();
-            base.Initialize(requestContext);
-        }
-
-        private void InitializeClips()
-        {
-            _clips.LoadFromResource(Properties.Resources.recommendation_engine);
-            _clips.LoadFromResource(Properties.Resources.recommendation_engine_def);
-            _clips.Reset();
-            _clips.Run();
-
-        }
-
         private QuestionAndAnswerModel GetState()
         {
-            var evalStr = Properties.Resources.FindFact;
-            var fv = (FactAddressValue)((MultifieldValue)_clips.Eval(evalStr))[0];
-            var state = fv["state"];
-
-            var whatisthis = ((LexemeValue)fv["relation-asserted"]).Value;
-            return new QuestionAndAnswerModel
-            {
-                QuestionId = whatisthis,
-                Question = fv["display"].ToString(),
-                Answers = GetAnswerChoices(fv)
-            };
+            return _clipsAdapter.GetQuestionAndAnswer();
         }
 
         private IEnumerable<AnswerModel> GetAnswerChoices(FactAddressValue fact)
@@ -88,13 +62,6 @@ namespace HousingRecommendationSystem.Controllers
             }
 
             return answers;
-        }
-
-        private void ProcessAnswer(QuestionAndAnswerModel qAModel)
-        {
-            _clips.Reset();
-            _clips.Eval(string.Format(Properties.Resources.AssertAnswer, qAModel.QuestionId, qAModel.SelectedAnswer));
-            _clips.Run();
         }
     }
 }

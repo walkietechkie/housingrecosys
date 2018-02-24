@@ -1,5 +1,7 @@
 ﻿@model HousingRecommendationSystem.Models.QuestionAndAnswerModel
 
+@using HousingRecommendationSystem.Models;
+
 @using (Html.BeginForm("SubmitAnswer", "Home", FormMethod.Post))
 {
     ViewBag.Title = "Home Page";
@@ -9,20 +11,20 @@
     @{
         var data = ViewBag.Message;
     }
-    <p class="lead">Q: @data.Question</p>
+    <p class="lead">Q: @data.Question.DisplayText</p>
 
     @{
         foreach (var answer in @data.Answers)
         {
-            @Html.RadioButtonFor(model => model.SelectedAnswer, (string) answer.AnswerId, new {@id = answer.AnswerId})
-            <label for="@answer.AnswerId">@answer.DisplayText</label>
-            @Html.Hidden("QuestionId", (string) data.QuestionId)
+            @Html.RadioButtonFor(model => model.SelectedAnswer, (string)answer.Id, new { @id = answer.Id })
+            <label for="@answer.Id">@answer.DisplayText</label>
         }
+        @Html.Hidden("State", (string)data.State)
     }
-    <br/>
-    <input type="submit" value="Next"/>
+    <br />
+    <input type="submit" value="Next" />
 </div>
 
-<div class="row">
-</div>
+    <div class="row">
+    </div>
 }
