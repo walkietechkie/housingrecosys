@@ -117,9 +117,6 @@
     <Reference Include="Microsoft.WindowsAzure.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.2.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.WindowsAzure.Storage, Version=8.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WindowsAzure.Storage.8.3.0\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
-    </Reference>
     <Reference Include="Mommosoft.ExpertSystem">
       <HintPath>..\external_libraries\Mommosoft.ExpertSystem.dll</HintPath>
     </Reference>
@@ -338,7 +335,8 @@
     <Content Include="Clips\recommendation_engine.clp" />
     <Content Include="Clips\recommendation_engine_def.clp" />
     <Content Include="Connected Services\walkietechkieAzureStorage\ConnectedService.json" />
-    <None Include="Properties\PublishProfiles\walkietechkie - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\walkietechkie-app - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\walkietechkie-app - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
