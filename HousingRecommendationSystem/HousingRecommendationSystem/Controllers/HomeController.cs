@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Web.Mvc;
-using System.Web.Routing;
-using CLIPSNET;
+﻿using System.Web.Mvc;
 using HousingRecommendationSystem.Models;
 
 namespace HousingRecommendationSystem.Controllers
@@ -10,13 +6,25 @@ namespace HousingRecommendationSystem.Controllers
     public class HomeController : Controller
     {
         private readonly IClipsAdapter _clipsAdapter;
+        private readonly IDatabaseUtility _databaseUtility;
 
-        public HomeController(IClipsAdapter clipsAdapter)
+        public HomeController(IClipsAdapter clipsAdapter, IDatabaseUtility databaseUtility)
         {
             _clipsAdapter = clipsAdapter;
+            _databaseUtility = databaseUtility;
         }
         public ActionResult Index()
         {
+            var qAndA = GetState();
+
+            if(qAndA.State == "final")
+            {
+                //get all properties for the clips final output
+                var properties = GetProperties("111110010000");
+
+                //todo redirect to maps controller
+                return RedirectToAction("Index");
+            }
             ViewBag.Message = GetState();
             return View();
         }
@@ -24,24 +32,8 @@ namespace HousingRecommendationSystem.Controllers
         [HttpPost]
         public ActionResult SubmitAnswer(QuestionAndAnswerModel qAModel)
         {
-            // todo: retrieve answer and pass back to clips
-            // then get state again to process next rule
             _clipsAdapter.EvaluateQuestionAndAnswer(qAModel);
             return RedirectToAction("Index");
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
 
         private QuestionAndAnswerModel GetState()
@@ -49,19 +41,9 @@ namespace HousingRecommendationSystem.Controllers
             return _clipsAdapter.GetQuestionAndAnswer();
         }
 
-        private IEnumerable<AnswerModel> GetAnswerChoices(FactAddressValue fact)
+        private System.Collections.Generic.IEnumerable<PropertyModel> GetProperties(string bucketId)
         {
-            var answers = new List<AnswerModel>();
-            var displayTexts = (MultifieldValue) fact["display-answers"];
-            var answerIds = (MultifieldValue)fact["valid-answers"];
-
-            int iterator = 0;
-            foreach (LexemeValue choice in displayTexts)
-            {
-                answers.Add(new AnswerModel(choice.Value, ((LexemeValue) answerIds[iterator++]).Value));
-            }
-
-            return answers;
+            return _databaseUtility.GetPropertyModelByBucketId(bucketId);
         }
     }
 }

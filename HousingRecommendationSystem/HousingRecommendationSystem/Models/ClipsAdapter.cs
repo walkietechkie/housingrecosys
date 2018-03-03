@@ -12,7 +12,6 @@ namespace HousingRecommendationSystem.Models
 
         public ClipsAdapter(IFileManager fileManager)
         {
-            //var filePath = "C:\\tmp\\ClipsScript.clp";
             var filePath = fileManager.GetClipsFilePath();
 
             _clipsEnvironment.AddRouter(new DebugRouter());
@@ -103,7 +102,7 @@ namespace HousingRecommendationSystem.Models
                     {
                         var ans = (SymbolValue)validAnswers[i];
                         // assume ans value is same for UI display and ID
-                        answerList.Add(new FactModel(GetDisplayText(ans), ans));
+                        answerList.Add(new FactModel(ans, ans));
                     }
                     returnValue.Answers = answerList;
                 }
