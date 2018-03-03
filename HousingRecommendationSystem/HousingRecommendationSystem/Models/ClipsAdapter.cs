@@ -37,6 +37,12 @@ namespace HousingRecommendationSystem.Models
             return _qAndA;
         }
 
+        public void Reset()
+        {
+            _clipsEnvironment.Reset();
+            Initialize();
+        }
+
         /* call this method from the fron end. D:\school\nus\unit1\project\git\HousingRecommendationSystem\HousingRecommendationSystem\Models\ClipsAdapter.cs
          * input = strButtonName = Next/Restart/Prev
          * initialFlag = call this for the first time

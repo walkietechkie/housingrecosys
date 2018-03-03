@@ -20,7 +20,7 @@ namespace HousingRecommendationSystem.Controllers
             if(qAndA.State == "final")
             {
                 //get all properties for the clips final output
-                var properties = GetProperties("111110010000");
+                //var properties = GetProperties("111110010000");
 
                 //todo redirect to maps controller
                 return RedirectToAction("Index");
@@ -33,6 +33,13 @@ namespace HousingRecommendationSystem.Controllers
         public ActionResult SubmitAnswer(QuestionAndAnswerModel qAModel)
         {
             _clipsAdapter.EvaluateQuestionAndAnswer(qAModel);
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult Reset()
+        {
+            _clipsAdapter.Reset();
             return RedirectToAction("Index");
         }
 
