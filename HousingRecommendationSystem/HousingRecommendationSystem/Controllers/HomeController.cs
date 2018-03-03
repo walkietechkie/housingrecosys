@@ -20,10 +20,10 @@ namespace HousingRecommendationSystem.Controllers
             if(qAndA.State == "final")
             {
                 //get all properties for the clips final output
-                //var properties = GetProperties("111110010000");
-
+                //var properties = GetProperties(qAndA.Question.Id.Replace("A",""));
+                var id = qAndA.Question.Id.Replace("A", "");
                 //todo redirect to maps controller
-                return RedirectToAction("Index");
+                return RedirectToAction("Index/"+id, "Maps", id);
             }
             ViewBag.Message = GetState();
             return View();
@@ -56,9 +56,9 @@ namespace HousingRecommendationSystem.Controllers
             return _clipsAdapter.GetQuestionAndAnswer();
         }
 
-        private System.Collections.Generic.IEnumerable<PropertyModel> GetProperties(string bucketId)
+        /*private System.Collections.Generic.IEnumerable<PropertyModel> GetProperties(string bucketId)
         {
             return _databaseUtility.GetPropertyModelByBucketId(bucketId);
-        }
+        }*/
     }
 }
