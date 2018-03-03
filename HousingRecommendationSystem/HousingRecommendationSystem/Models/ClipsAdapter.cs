@@ -12,7 +12,6 @@ namespace HousingRecommendationSystem.Models
 
         public ClipsAdapter(IFileManager fileManager)
         {
-            //var filePath = "C:\\tmp\\ClipsScript.clp";
             var filePath = fileManager.GetClipsFilePath();
 
             _clipsEnvironment.AddRouter(new DebugRouter());
@@ -36,6 +35,12 @@ namespace HousingRecommendationSystem.Models
         public QuestionAndAnswerModel GetQuestionAndAnswer()
         {
             return _qAndA;
+        }
+
+        public void Reset()
+        {
+            _clipsEnvironment.Reset();
+            Initialize();
         }
 
         /* call this method from the fron end. D:\school\nus\unit1\project\git\HousingRecommendationSystem\HousingRecommendationSystem\Models\ClipsAdapter.cs
@@ -103,7 +108,7 @@ namespace HousingRecommendationSystem.Models
                     {
                         var ans = (SymbolValue)validAnswers[i];
                         // assume ans value is same for UI display and ID
-                        answerList.Add(new FactModel(GetDisplayText(ans), ans));
+                        answerList.Add(new FactModel(ans, ans));
                     }
                     returnValue.Answers = answerList;
                 }

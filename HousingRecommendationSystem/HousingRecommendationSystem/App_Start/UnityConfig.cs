@@ -46,6 +46,7 @@ namespace HousingRecommendationSystem
             // container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType<IClipsAdapter, ClipsAdapter>(new ContainerControlledLifetimeManager());
             container.RegisterType<IFileManager, FileManager>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IDatabaseUtility, DatabaseUtility>(new ContainerControlledLifetimeManager());
 
         }
     }

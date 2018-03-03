@@ -9,12 +9,17 @@ namespace HousingRecommendationSystem
 
         public string GetClipsFilePath()
         {
-            var tempPath = Path.GetTempPath() + "\\ClipsScript.clp";
+            var tempPath = Path.GetTempPath() + "ClipsScript.clp";
+
+            if(File.Exists(tempPath))
+            {
+                return tempPath;
+            }
+
             using (var wc = new System.Net.WebClient())
             {
                 wc.DownloadFile(_filePath, tempPath);
             }
-
             return tempPath;
         }
     }

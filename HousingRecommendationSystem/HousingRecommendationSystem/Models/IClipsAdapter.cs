@@ -11,5 +11,7 @@ namespace HousingRecommendationSystem.Models
         QuestionAndAnswerModel GetQuestionAndAnswer();
 
         void EvaluateQuestionAndAnswer(QuestionAndAnswerModel questionAndAnswer);
+
+        void Reset();
     }
 }
