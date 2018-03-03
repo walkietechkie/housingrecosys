@@ -79,11 +79,65 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to What is your age?.
+        /// </summary>
+        internal static string age_question {
+            get {
+                return ResourceManager.GetString("age_question", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Is the battery charged?.
         /// </summary>
         internal static string BatteryQuestion {
             get {
                 return ResourceManager.GetString("BatteryQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At least how many bedroom/s you are interested (max. 10)?.
+        /// </summary>
+        internal static string bedroom_qn {
+            get {
+                return ResourceManager.GetString("bedroom_qn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What is your budget?.
+        /// </summary>
+        internal static string budget {
+            get {
+                return ResourceManager.GetString("budget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is the your first time buying a house?.
+        /// </summary>
+        internal static string buyer_exp {
+            get {
+                return ResourceManager.GetString("buyer_exp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you own a car?.
+        /// </summary>
+        internal static string car_qn {
+            get {
+                return ResourceManager.GetString("car_qn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What is your current citizenship?.
+        /// </summary>
+        internal static string citizenship {
+            get {
+                return ResourceManager.GetString("citizenship", resourceCulture);
             }
         }
         
@@ -133,6 +187,15 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Next, we also wish to know your frequency of doing housework in a week by your own ?.
+        /// </summary>
+        internal static string housework_qn {
+            get {
+                return ResourceManager.GetString("housework_qn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Does the engine knock?.
         /// </summary>
         internal static string KnockQuestion {
@@ -147,6 +210,42 @@ namespace HousingRecommendationSystem.Resources {
         internal static string LeadWireRepair {
             get {
                 return ResourceManager.GetString("LeadWireRepair", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What is your preferred location?.
+        /// </summary>
+        internal static string location_first {
+            get {
+                return ResourceManager.GetString("location_first", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What is your preferred location?.
+        /// </summary>
+        internal static string location_old {
+            get {
+                return ResourceManager.GetString("location_old", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you have any maids ? (yes/no)?.
+        /// </summary>
+        internal static string maid_qn {
+            get {
+                return ResourceManager.GetString("maid_qn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you married?.
+        /// </summary>
+        internal static string marital_status {
+            get {
+                return ResourceManager.GetString("marital_status", resourceCulture);
             }
         }
         
@@ -232,6 +331,15 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to How long have you been living in Singapore?.
+        /// </summary>
+        internal static string residency {
+            get {
+                return ResourceManager.GetString("residency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Does the engine rotate?.
         /// </summary>
         internal static string RotateQuestion {
@@ -259,6 +367,51 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Do you prefer racquet sport or basketball sport? (Neither if both are not in preferences).
+        /// </summary>
+        internal static string sport_gen {
+            get {
+                return ResourceManager.GetString("sport_gen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Perhaps, you like to jogging or gym ?.
+        /// </summary>
+        internal static string sport_gym {
+            get {
+                return ResourceManager.GetString("sport_gym", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Then, do you badminton, squash or tennis?.
+        /// </summary>
+        internal static string sport_racket {
+            get {
+                return ResourceManager.GetString("sport_racket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What is your spouse citizenship?.
+        /// </summary>
+        internal static string spouse_citizenship {
+            get {
+                return ResourceManager.GetString("spouse_citizenship", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is your spouse obtained his/her Singapore Permanent Residence for more than 3 years?.
+        /// </summary>
+        internal static string spouse_residency {
+            get {
+                return ResourceManager.GetString("spouse_residency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Does the engine start?.
         /// </summary>
         internal static string StartQuestion {
@@ -268,7 +421,7 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Welcome to the Engine Diagnosis Expert System..
+        ///   Looks up a localized string similar to Welcome to the House Recommendation Expert System..
         /// </summary>
         internal static string WelcomeMessage {
             get {
@@ -282,6 +435,15 @@ namespace HousingRecommendationSystem.Resources {
         internal static string Yes {
             get {
                 return ResourceManager.GetString("Yes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have any preference on the year of completion for the house?.
+        /// </summary>
+        internal static string yr_complete {
+            get {
+                return ResourceManager.GetString("yr_complete", resourceCulture);
             }
         }
     }

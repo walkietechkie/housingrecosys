@@ -123,8 +123,26 @@
   <data name="AdjustTimingRepair" xml:space="preserve">
     <value>Suggested Repair: Adjust timing.</value>
   </data>
+  <data name="age_question" xml:space="preserve">
+    <value>What is your age?</value>
+  </data>
   <data name="BatteryQuestion" xml:space="preserve">
     <value>Is the battery charged?</value>
+  </data>
+  <data name="bedroom_qn" xml:space="preserve">
+    <value>At least how many bedroom/s you are interested (max. 10)?</value>
+  </data>
+  <data name="budget" xml:space="preserve">
+    <value>What is your budget?</value>
+  </data>
+  <data name="buyer_exp" xml:space="preserve">
+    <value>Is the your first time buying a house?</value>
+  </data>
+  <data name="car_qn" xml:space="preserve">
+    <value>Do you own a car?</value>
+  </data>
+  <data name="citizenship" xml:space="preserve">
+    <value>What is your current citizenship?</value>
   </data>
   <data name="CleanPointsRepair" xml:space="preserve">
     <value>Suggested Repair: Clean the points.</value>
@@ -141,11 +159,26 @@
   <data name="GasQuestion" xml:space="preserve">
     <value>Does the tank have any gas in it?</value>
   </data>
+  <data name="housework_qn" xml:space="preserve">
+    <value>Next, we also wish to know your frequency of doing housework in a week by your own ?</value>
+  </data>
   <data name="KnockQuestion" xml:space="preserve">
     <value>Does the engine knock?</value>
   </data>
   <data name="LeadWireRepair" xml:space="preserve">
     <value>Suggested Repair: Replace the distributor lead wire.</value>
+  </data>
+  <data name="location_first" xml:space="preserve">
+    <value>What is your preferred location?</value>
+  </data>
+  <data name="location_old" xml:space="preserve">
+    <value>What is your preferred location?</value>
+  </data>
+  <data name="maid_qn" xml:space="preserve">
+    <value>Do you have any maids ? (yes/no)?</value>
+  </data>
+  <data name="marital_status" xml:space="preserve">
+    <value>Are you married?</value>
   </data>
   <data name="MechanicRepair" xml:space="preserve">
     <value>Suggested Repair: Take your car to a mechanic.</value>
@@ -174,6 +207,9 @@
   <data name="ReplacePointsRepair" xml:space="preserve">
     <value>Suggested Repair: Replace the points.</value>
   </data>
+  <data name="residency" xml:space="preserve">
+    <value>How long have you been living in Singapore?</value>
+  </data>
   <data name="RotateQuestion" xml:space="preserve">
     <value>Does the engine rotate?</value>
   </data>
@@ -183,13 +219,31 @@
   <data name="SluggishQuestion" xml:space="preserve">
     <value>Is the engine sluggish?</value>
   </data>
+  <data name="sport_gen" xml:space="preserve">
+    <value>Do you prefer racquet sport or basketball sport? (Neither if both are not in preferences)</value>
+  </data>
+  <data name="sport_gym" xml:space="preserve">
+    <value>Perhaps, you like to jogging or gym ?</value>
+  </data>
+  <data name="sport_racket" xml:space="preserve">
+    <value>Then, do you badminton, squash or tennis?</value>
+  </data>
+  <data name="spouse_citizenship" xml:space="preserve">
+    <value>What is your spouse citizenship?</value>
+  </data>
+  <data name="spouse_residency" xml:space="preserve">
+    <value>Is your spouse obtained his/her Singapore Permanent Residence for more than 3 years?</value>
+  </data>
   <data name="StartQuestion" xml:space="preserve">
     <value>Does the engine start?</value>
   </data>
   <data name="WelcomeMessage" xml:space="preserve">
-    <value>Welcome to the Engine Diagnosis Expert System.</value>
+    <value>Welcome to the House Recommendation Expert System.</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Yes</value>
+  </data>
+  <data name="yr_complete" xml:space="preserve">
+    <value>You have any preference on the year of completion for the house?</value>
   </data>
 </root>
