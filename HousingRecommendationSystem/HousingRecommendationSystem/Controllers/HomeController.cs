@@ -23,7 +23,7 @@ namespace HousingRecommendationSystem.Controllers
                 //var properties = GetProperties(qAndA.Question.Id.Replace("A",""));
                 var id = qAndA.Question.Id.Replace("A", "");
                 //todo redirect to maps controller
-                return RedirectToAction("Index/"+id, "Maps", id);
+                return RedirectToAction("Search/"+id, "Maps", id);
             }
             ViewBag.Message = GetState();
             return View();

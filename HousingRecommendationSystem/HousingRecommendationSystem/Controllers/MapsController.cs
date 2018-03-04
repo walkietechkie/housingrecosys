@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
+using PagedList;
 
 namespace HousingRecommendationSystem.Controllers
 {
@@ -28,6 +29,17 @@ namespace HousingRecommendationSystem.Controllers
             var initialList = GetProperties(strID);
             ViewData["ListData"] = initialList;
             return View(initialList.ToList());  
+        }
+        public ActionResult Search(string id, int? page)
+        {
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+            if (String.IsNullOrEmpty(id))
+            {
+                //id = "111110010000";
+                return RedirectToAction("Index", "Home");
+            }
+            return View(GetProperties(id).ToPagedList(pageNumber,pageSize));
         }
         [HttpGet]
         public JsonResult GetData(string id)

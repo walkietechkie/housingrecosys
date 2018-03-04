@@ -1,0 +1,93 @@
+﻿@model PagedList.IPagedList<HousingRecommendationSystem.Models.PropertyModel>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="http://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
+<style>
+    .infoDiv {
+        height: 100px;
+        width: 200px;
+        -webkit-user-select: none;
+        background-color: white;
+    }
+
+    .left-box {
+        float: left;
+        width: 25%;
+        height: 300px;
+    }
+
+    .right-box {
+        float: right;
+        width: 70%;
+        height: 550px;
+        border: 1px solid #73AD21;
+    }
+</style>
+
+<div class="left-box">
+    <table border="1">
+        <tr><th>Property List</th></tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.PropertyName</td>
+            </tr>
+        }
+    </table>
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("Search", new { page }))
+</div>
+<div id="dvMap" class="right-box">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt916N2Qo6qPUuHBej-atmcrtIb4NTcGA"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var Tunisie = new google.maps.LatLng(1.2921816, 103.7766);
+            var mapOptions = {
+                zoom: 11,
+                center: Tunisie,
+                mapTypeId: google.maps.MapTypeId.G_NORMAL_MAP
+            };
+            var infoWindow = new google.maps.InfoWindow();
+            google.maps.visualRefresh = true;
+                        
+            var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+            var data = @Html.Raw(Json.Encode(Model));
+            //console.log(data)
+
+            for (var i = 0; i < data.length; i++) {
+                var newData = data[i]
+                console.log(newData.PropertyName + " - "+ newData.Longitude + " - "+ newData.Latitude)
+                var marker = new google.maps.Marker({
+                    'position': new google.maps.LatLng(newData.Latitude, newData.Longitude),
+                    'map': map,
+                    'draggable': true,
+                    'animation': google.maps.Animation.DROP,
+                    'title': newData.PropertyName
+                });
+                // Make the marker-pin blue!
+                marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png')
+
+                // put in some information about each json object - in this case, the opening hours.
+                var infowindow = new google.maps.InfoWindow({
+                    content: "<div class='infoDiv'><h5>" + newData.PropertyName + "</h5></div></div>"
+                });
+
+                // finally hook up an "OnClick" listener to the map so it pops up out info-window when the marker-pin is clicked!
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow.open(map, marker);
+                });
+            }            
+        }
+    </script>
+</div>
+<br />
+<br />
+
+
+
