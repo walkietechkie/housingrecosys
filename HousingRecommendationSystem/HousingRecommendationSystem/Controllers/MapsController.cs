@@ -23,10 +23,11 @@ namespace HousingRecommendationSystem.Controllers
             if (string.IsNullOrEmpty(strID))
             {
                 strID = "111011110001";
-            }
-            
+            }            
             ViewData["IDFromClips"] = strID;
-            return View();
+            var initialList = GetProperties(strID);
+            ViewData["ListData"] = initialList;
+            return View(initialList.ToList());  
         }
         [HttpGet]
         public JsonResult GetData(string id)
