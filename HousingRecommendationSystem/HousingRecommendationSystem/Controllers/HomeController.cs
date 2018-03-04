@@ -55,10 +55,5 @@ namespace HousingRecommendationSystem.Controllers
         {
             return _clipsAdapter.GetQuestionAndAnswer();
         }
-
-        /*private System.Collections.Generic.IEnumerable<PropertyModel> GetProperties(string bucketId)
-        {
-            return _databaseUtility.GetPropertyModelByBucketId(bucketId);
-        }*/
     }
 }
