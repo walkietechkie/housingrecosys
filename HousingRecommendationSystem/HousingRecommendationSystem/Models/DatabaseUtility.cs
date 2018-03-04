@@ -16,7 +16,8 @@ namespace HousingRecommendationSystem.Models
                 using (SqlConnection connection = new SqlConnection(con.ConnectionString))
                 {
                     connection.Open();
-                    var sql = "SELECT TOP 25 PropertyName, longitude_units, latitude_units FROM TBL_Propery WHERE Amenities_Compile = '{0}'";
+                    var sql = @"SELECT TOP 25 PropertyName, longitude_units, latitude_units,PropertyAddress,
+                                PropertyType,new_price FROM TBL_Propery WHERE Amenities_Compile = '{0}'";
                         
                     using (SqlCommand command = new SqlCommand(String.Format(sql, bucketId), connection))
                     {
@@ -26,7 +27,7 @@ namespace HousingRecommendationSystem.Models
                             {
                                 result.Add(new PropertyModel
                                 {
-                                    PropertyName = reader.GetString(0),
+                                    PropertyName = reader.GetString(0) + " -" + reader.GetString(3) + " -" + reader.GetString(4) + " - $" + String.Format("{0:c}", reader.GetDouble(5).ToString()),
                                     Longitude = reader.GetDouble(1),
                                     Latitude = reader.GetDouble(2),
                                 });

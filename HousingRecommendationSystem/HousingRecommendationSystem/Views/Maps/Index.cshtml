@@ -1,4 +1,4 @@
-﻿<script src="http://maps.google.com/maps/api/js?key=AIzaSyAt916N2Qo6qPUuHBej-atmcrtIb4NTcGA&sensor=true" type="text/javascript">
+﻿<script src="http://maps.google.com/maps/api/js?key=AIzaSyAt916N2Qo6qPUuHBej-atmcrtIb4NTcGA" type="text/javascript">
 
 </script>
 <script src="http://code.jquery.com/jquery-3.3.1.js"
@@ -60,9 +60,12 @@
         //          { "Id": 3, "PlaceName": "Sousse", "GeoLong": "35.8329809", "GeoLat": "10.63875" },
         //          { "Id": 4, "PlaceName": "Sfax", "GeoLong": "34.745159", "GeoLat": "10.7613" }
         //       ];
+            //var strID = @Html.Raw(Json.Encode(ViewData["IDFromClips"]));
+            //alert(strID);
             var data;
             $.ajax({
-                url: '@Url.Action("GetData","Maps")',
+                url: '@Url.Action("GetData", "Maps")',
+                data: { 'id': + @Html.Raw(Json.Encode(ViewData["IDFromClips"]))},
                 type: "GET",
                 async: false,
                 success: function (result) {

@@ -20,17 +20,24 @@ namespace HousingRecommendationSystem.Controllers
         public ActionResult Index(string ID)
         {
             strID = ID;
+            if (string.IsNullOrEmpty(strID))
+            {
+                strID = "111011110001";
+            }
+            
+            ViewData["IDFromClips"] = strID;
             return View();
         }
         [HttpGet]
-        public JsonResult GetData()
+        public JsonResult GetData(string id)
         {
-            IEnumerable<PropertyModel> _pr =  GetProperties(strID);
+            Console.WriteLine("ID from Ajax");
+            IEnumerable<PropertyModel> _pr =  GetProperties(id);
             List<JsonData> lsJSonData = new List<JsonData>();
             int iRow = 0;
             foreach (PropertyModel pr in _pr)
             {
-                lsJSonData.Add(new JsonData { Id = iRow, PlaceName = pr.PropertyName, GeoLat = pr.Latitude.ToString(), GeoLong = pr.Longitude.ToString()});
+                lsJSonData.Add(new JsonData { Id = iRow, PlaceName = pr.PropertyName, GeoLat = pr.Longitude.ToString(), GeoLong = pr.Latitude.ToString()});
                 iRow++;
             }
             
