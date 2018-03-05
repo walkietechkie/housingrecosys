@@ -42,7 +42,6 @@
     </table>
     Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
     @Html.PagedListPager(Model, page => Url.Action("Search", new { page }))
-    <br />
     @Html.ActionLink("Reset","Index","Home")
     
 </div>
