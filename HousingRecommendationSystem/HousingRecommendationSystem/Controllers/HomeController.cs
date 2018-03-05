@@ -22,6 +22,8 @@ namespace HousingRecommendationSystem.Controllers
                 //get all properties for the clips final output
                 //var properties = GetProperties(qAndA.Question.Id.Replace("A",""));
                 var id = qAndA.Question.Id.Replace("A", "");
+                //can reset the Clips
+                _clipsAdapter.Reset();
                 //todo redirect to maps controller
                 return RedirectToAction("Search/"+id, "Maps", id);
             }

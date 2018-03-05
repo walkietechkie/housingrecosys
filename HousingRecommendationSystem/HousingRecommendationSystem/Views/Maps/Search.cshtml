@@ -42,6 +42,9 @@
     </table>
     Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
     @Html.PagedListPager(Model, page => Url.Action("Search", new { page }))
+    <br />
+    @Html.ActionLink("Reset","Index","Home")
+    
 </div>
 <div id="dvMap" class="right-box">
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt916N2Qo6qPUuHBej-atmcrtIb4NTcGA"></script>
