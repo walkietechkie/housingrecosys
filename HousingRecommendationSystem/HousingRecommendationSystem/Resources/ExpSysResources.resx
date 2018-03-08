@@ -117,26 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddGasRepair" xml:space="preserve">
-    <value>Suggested Repair: Add gas.</value>
-  </data>
-  <data name="AdjustTimingRepair" xml:space="preserve">
-    <value>Suggested Repair: Adjust timing.</value>
+  <data name="location_qn" xml:space="preserve">
+    <value>Where is your preferred location?</value>
   </data>
   <data name="age_question" xml:space="preserve">
-    <value>What is your age?</value>
-  </data>
-  <data name="BatteryQuestion" xml:space="preserve">
-    <value>Is the battery charged?</value>
+    <value>How old are you?</value>
   </data>
   <data name="bedroom_qn" xml:space="preserve">
-    <value>At least how many bedroom/s you are interested (max. 10)?</value>
+    <value>At least how many bedroom/s are you interested?</value>
   </data>
   <data name="budget" xml:space="preserve">
-    <value>What is your budget?</value>
+    <value>How much is your budget?</value>
   </data>
   <data name="buyer_exp" xml:space="preserve">
-    <value>Is the your first time buying a house?</value>
+    <value>Is this your first time buying a house?</value>
   </data>
   <data name="car_qn" xml:space="preserve">
     <value>Do you own a car?</value>
@@ -144,98 +138,35 @@
   <data name="citizenship" xml:space="preserve">
     <value>What is your current citizenship?</value>
   </data>
-  <data name="CleanPointsRepair" xml:space="preserve">
-    <value>Suggested Repair: Clean the points.</value>
-  </data>
-  <data name="CoilQuestion" xml:space="preserve">
-    <value>Is the conductivity test for the ignition coil positive?</value>
-  </data>
-  <data name="CoilRepair" xml:space="preserve">
-    <value>Suggested Repair: Replace the ignition coil.</value>
-  </data>
-  <data name="FuelLineRepair" xml:space="preserve">
-    <value>Suggested Repair: Clean the fuel line.</value>
-  </data>
-  <data name="GasQuestion" xml:space="preserve">
-    <value>Does the tank have any gas in it?</value>
-  </data>
   <data name="housework_qn" xml:space="preserve">
-    <value>Next, we also wish to know your frequency of doing housework in a week by your own ?</value>
-  </data>
-  <data name="KnockQuestion" xml:space="preserve">
-    <value>Does the engine knock?</value>
-  </data>
-  <data name="LeadWireRepair" xml:space="preserve">
-    <value>Suggested Repair: Replace the distributor lead wire.</value>
-  </data>
-  <data name="location_first" xml:space="preserve">
-    <value>What is your preferred location?</value>
-  </data>
-  <data name="location_old" xml:space="preserve">
-    <value>What is your preferred location?</value>
+    <value>How often do you do housework?</value>
   </data>
   <data name="maid_qn" xml:space="preserve">
-    <value>Do you have any maids ? (yes/no)?</value>
+    <value>Do you have any maids?</value>
   </data>
   <data name="marital_status" xml:space="preserve">
     <value>Are you married?</value>
   </data>
-  <data name="MechanicRepair" xml:space="preserve">
-    <value>Suggested Repair: Take your car to a mechanic.</value>
-  </data>
-  <data name="MisfireQuestion" xml:space="preserve">
-    <value>Does the engine misfire?</value>
-  </data>
   <data name="No" xml:space="preserve">
     <value>No</value>
   </data>
-  <data name="NoRepair" xml:space="preserve">
-    <value>Suggested Repair: None.</value>
-  </data>
-  <data name="OutputQuestion" xml:space="preserve">
-    <value>Is the output of the engine low?</value>
-  </data>
-  <data name="PointGapRepair" xml:space="preserve">
-    <value>Suggested Repair: Adjust point gap.</value>
-  </data>
-  <data name="PointsQuestion" xml:space="preserve">
-    <value>What is the surface state of the points?</value>
-  </data>
-  <data name="ReplaceBatteryRepair" xml:space="preserve">
-    <value>Suggested Repair: Charge the battery.</value>
-  </data>
-  <data name="ReplacePointsRepair" xml:space="preserve">
-    <value>Suggested Repair: Replace the points.</value>
-  </data>
   <data name="residency" xml:space="preserve">
     <value>How long have you been living in Singapore?</value>
-  </data>
-  <data name="RotateQuestion" xml:space="preserve">
-    <value>Does the engine rotate?</value>
-  </data>
-  <data name="RunQuestion" xml:space="preserve">
-    <value>Does the engine run normally?</value>
-  </data>
-  <data name="SluggishQuestion" xml:space="preserve">
-    <value>Is the engine sluggish?</value>
   </data>
   <data name="sport_gen" xml:space="preserve">
     <value>Do you prefer racquet sport or basketball sport? (Neither if both are not in preferences)</value>
   </data>
   <data name="sport_gym" xml:space="preserve">
-    <value>Perhaps, you like to jogging or gym ?</value>
+    <value>Perhaps, you like to jog, gym or swim?</value>
   </data>
   <data name="sport_racket" xml:space="preserve">
-    <value>Then, do you badminton, squash or tennis?</value>
+    <value>Then, do you play badminton, squash or tennis?</value>
   </data>
   <data name="spouse_citizenship" xml:space="preserve">
     <value>What is your spouse citizenship?</value>
   </data>
   <data name="spouse_residency" xml:space="preserve">
-    <value>Is your spouse obtained his/her Singapore Permanent Residence for more than 3 years?</value>
-  </data>
-  <data name="StartQuestion" xml:space="preserve">
-    <value>Does the engine start?</value>
+    <value>Has your spouse obtained his/her Singapore Permanent Residence for more than 3 years?</value>
   </data>
   <data name="WelcomeMessage" xml:space="preserve">
     <value>Welcome to the House Recommendation Expert System.</value>
@@ -244,6 +175,183 @@
     <value>Yes</value>
   </data>
   <data name="yr_complete" xml:space="preserve">
-    <value>You have any preference on the year of completion for the house?</value>
+    <value>Do you mind an older estate? (Year of Completion &gt; 15 years)</value>
+  </data>
+  <data name="ac1" xml:space="preserve">
+    <value>less than 25 years old</value>
+  </data>
+  <data name="ac2" xml:space="preserve">
+    <value>25 to 30 years old</value>
+  </data>
+  <data name="ac3" xml:space="preserve">
+    <value>31 to 34 years old</value>
+  </data>
+  <data name="ac4" xml:space="preserve">
+    <value>35 to 40 years old</value>
+  </data>
+  <data name="ac5" xml:space="preserve">
+    <value>41 to 50 years old</value>
+  </data>
+  <data name="ac6" xml:space="preserve">
+    <value>51 and above</value>
+  </data>
+  <data name="bb01" xml:space="preserve">
+    <value>Less than 200k</value>
+  </data>
+  <data name="bb02" xml:space="preserve">
+    <value>200k - 299k</value>
+  </data>
+  <data name="bb03" xml:space="preserve">
+    <value>300k - 399k</value>
+  </data>
+  <data name="bb04" xml:space="preserve">
+    <value>400k - 499k</value>
+  </data>
+  <data name="bb05" xml:space="preserve">
+    <value>500k - 599k</value>
+  </data>
+  <data name="bb06" xml:space="preserve">
+    <value>600k - 699k</value>
+  </data>
+  <data name="bb07" xml:space="preserve">
+    <value>700k - 799k</value>
+  </data>
+  <data name="bb08" xml:space="preserve">
+    <value>800k - 899k</value>
+  </data>
+  <data name="bb09" xml:space="preserve">
+    <value>900k - 999k</value>
+  </data>
+  <data name="bb10" xml:space="preserve">
+    <value>1.00 Million - 1.49 Million</value>
+  </data>
+  <data name="bb11" xml:space="preserve">
+    <value>1.50 Million - 1.99 Million</value>
+  </data>
+  <data name="bb12" xml:space="preserve">
+    <value>2.00 Million - 2.49 Million</value>
+  </data>
+  <data name="bb13" xml:space="preserve">
+    <value>2.50 Million - 2.99 Million</value>
+  </data>
+  <data name="bb14" xml:space="preserve">
+    <value>3.00 Million - 3.49 Million</value>
+  </data>
+  <data name="bb15" xml:space="preserve">
+    <value>3.50 Million - 3.99 Million</value>
+  </data>
+  <data name="bb16" xml:space="preserve">
+    <value>4.00 Million - 4.49 Million</value>
+  </data>
+  <data name="bb17" xml:space="preserve">
+    <value>4.50 Million - 4.99 Million</value>
+  </data>
+  <data name="bb18" xml:space="preserve">
+    <value>5.00 Million and above</value>
+  </data>
+  <data name="family_qn" xml:space="preserve">
+    <value>Do you have any children?</value>
+  </data>
+  <data name="fr" xml:space="preserve">
+    <value>Foreigner</value>
+  </data>
+  <data name="hh1" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+  <data name="hh2" xml:space="preserve">
+    <value>Frequent</value>
+  </data>
+  <data name="hh3" xml:space="preserve">
+    <value>Weekly</value>
+  </data>
+  <data name="hh4" xml:space="preserve">
+    <value>Infrequent</value>
+  </data>
+  <data name="ll01" xml:space="preserve">
+    <value>East</value>
+  </data>
+  <data name="ll02" xml:space="preserve">
+    <value>North East</value>
+  </data>
+  <data name="ll03" xml:space="preserve">
+    <value>East</value>
+  </data>
+  <data name="ll04" xml:space="preserve">
+    <value>West</value>
+  </data>
+  <data name="ll05" xml:space="preserve">
+    <value>Central</value>
+  </data>
+  <data name="mm1" xml:space="preserve">
+    <value>yes</value>
+  </data>
+  <data name="mm2" xml:space="preserve">
+    <value>no</value>
+  </data>
+  <data name="n" xml:space="preserve">
+    <value>no</value>
+  </data>
+  <data name="pr" xml:space="preserve">
+    <value>Permanent Resident</value>
+  </data>
+  <data name="prr1" xml:space="preserve">
+    <value>Less than 3 years</value>
+  </data>
+  <data name="prr2" xml:space="preserve">
+    <value>3 years and more</value>
+  </data>
+  <data name="rr1" xml:space="preserve">
+    <value>1 room</value>
+  </data>
+  <data name="rr2" xml:space="preserve">
+    <value>2 rooms</value>
+  </data>
+  <data name="rr3" xml:space="preserve">
+    <value>3 rooms</value>
+  </data>
+  <data name="rr4" xml:space="preserve">
+    <value>4 rooms</value>
+  </data>
+  <data name="rr5" xml:space="preserve">
+    <value>5 rooms</value>
+  </data>
+  <data name="rr6" xml:space="preserve">
+    <value>More than 5 Rooms</value>
+  </data>
+  <data name="sc" xml:space="preserve">
+    <value>Singaporean</value>
+  </data>
+  <data name="single_qn" xml:space="preserve">
+    <value>Do you plan to get married in the near future?</value>
+  </data>
+  <data name="ss1" xml:space="preserve">
+    <value>Racquet Sport</value>
+  </data>
+  <data name="ss2" xml:space="preserve">
+    <value>Basketball</value>
+  </data>
+  <data name="ss3" xml:space="preserve">
+    <value>Neither</value>
+  </data>
+  <data name="ss4" xml:space="preserve">
+    <value>Badminton</value>
+  </data>
+  <data name="ss5" xml:space="preserve">
+    <value>Squash</value>
+  </data>
+  <data name="ss6" xml:space="preserve">
+    <value>Tennis</value>
+  </data>
+  <data name="ss7" xml:space="preserve">
+    <value>Jogging</value>
+  </data>
+  <data name="ss8" xml:space="preserve">
+    <value>Gym</value>
+  </data>
+  <data name="ss9" xml:space="preserve">
+    <value>Pool</value>
+  </data>
+  <data name="y" xml:space="preserve">
+    <value>yes</value>
   </data>
 </root>

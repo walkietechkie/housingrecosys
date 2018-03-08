@@ -108,7 +108,7 @@ namespace HousingRecommendationSystem.Models
                     {
                         var ans = (SymbolValue)validAnswers[i];
                         // assume ans value is same for UI display and ID
-                        answerList.Add(new FactModel(ans, ans));
+                        answerList.Add(new FactModel(GetDisplayText(ans), ans));
                     }
                     returnValue.Answers = answerList;
                 }
