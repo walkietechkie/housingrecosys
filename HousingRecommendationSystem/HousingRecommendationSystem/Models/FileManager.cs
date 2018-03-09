@@ -5,16 +5,11 @@ namespace HousingRecommendationSystem
 {
     public class FileManager : IFileManager
     {
-        private string _filePath = "https://storage.googleapis.com/walkietechkie-bucket/ClipsScript.clp";
+        private string _filePath = "https://storage.googleapis.com/walkietechkie-bucket/ClipsScriptV3.clp";
 
         public string GetClipsFilePath()
         {
-            var tempPath = Path.GetTempPath() + "ClipsScript.clp";
-
-            if(File.Exists(tempPath))
-            {
-                return tempPath;
-            }
+            var tempPath = Path.GetTempPath() + "ClipsScriptV3.clp";
 
             using (var wc = new System.Net.WebClient())
             {

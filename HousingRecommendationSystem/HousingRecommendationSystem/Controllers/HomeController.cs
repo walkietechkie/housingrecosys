@@ -16,8 +16,12 @@ namespace HousingRecommendationSystem.Controllers
         public ActionResult Index()
         {
             var qAndA = GetState();
+            string getAnswer = "";
+            if (!string.IsNullOrEmpty(qAndA.Question.Id)) {
+                getAnswer = qAndA.Question.Id;
+                }
 
-            if(qAndA.State == "final")
+            if (qAndA.State == "final" || getAnswer.StartsWith("A"))
             {
                 //get all properties for the clips final output
                 //var properties = GetProperties(qAndA.Question.Id.Replace("A",""));
@@ -41,16 +45,8 @@ namespace HousingRecommendationSystem.Controllers
         [HttpPost]
         public ActionResult Reset()
         {
-            ViewBag.Message = "Housing Recommendation System";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "We will be reachable at";
-
-            return View();
+            _clipsAdapter.Reset();
+            return RedirectToAction("Index");
         }
 
         private QuestionAndAnswerModel GetState()

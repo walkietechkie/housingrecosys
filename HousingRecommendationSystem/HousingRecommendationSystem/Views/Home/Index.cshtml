@@ -2,30 +2,52 @@
 
 @using HousingRecommendationSystem.Models;
 
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    $(function () {
+        if ($(".answers:checked").length) {
+            $("#Next").prop('disabled', false);
+        }
+
+        $(".answers").change(function () { $("#Next").prop("disabled", false); });
+    });
+</script>
+
 @using (Html.BeginForm("SubmitAnswer", "Home", FormMethod.Post))
 {
     ViewBag.Title = "Home Page";
 
-    <div class="jumbotron">
-        <h1>Housing Recommendation System</h1>
-        @{
-            var data = ViewBag.Message;
+<div class="jumbotron">
+    <h3>Housing Recommendation System</h3>
+    @{
+        var data = ViewBag.Message;
+    }
+    <p class="lead">Q: @data.Question.DisplayText</p>
+
+    @{
+        foreach (var answer in @data.Answers)
+        {
+            @Html.RadioButtonFor(model => model.SelectedAnswer, (string)answer.Id, new { @id = answer.Id, @class = "answers" })
+            <label for="@answer.Id">@answer.DisplayText</label>
+            <br/>
         }
-        <p class="lead">Q: @data.Question.DisplayText</p>
-
-        @{
-            foreach (var answer in @data.Answers)
-            {
-                @Html.RadioButtonFor(model => model.SelectedAnswer, (string)answer.Id, new { @id = answer.Id })
-                <label for="@answer.Id">@answer.DisplayText</label>
-            }
-            @Html.Hidden("State", (string)data.State)
+        @Html.Hidden("State", (string)data.State)
+    }
+    <br />
+    @{
+        if (data.Answers.Count <= 0)
+        {
+            <input type="submit" value="Next" id="Next" />
         }
-        <br />
-        <input type="submit" value="Next" />
+        else
+        {
+            <input type="submit" value="Next" id="Next" disabled="disabled"/>
+        }
+    }
 
 
-    </div>
+
+</div>
 }
 @using (Html.BeginForm("Reset", "Home", FormMethod.Post))
 {

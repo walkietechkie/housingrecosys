@@ -20,9 +20,9 @@ namespace HousingRecommendationSystem
             );
             routes.MapRoute(
                 name: "Maps",
-                url: "{controller}/{action}/{id}"//,
-                //defaults : new { controller = "Maps", action = "Index", id = UrlParameter.Optional}
-            );
+                url: "{controller}/{action}/{id}",
+                defaults : new { controller = "Maps", action = "Search", id = UrlParameter.Optional}
+                );
         }
     }
 }

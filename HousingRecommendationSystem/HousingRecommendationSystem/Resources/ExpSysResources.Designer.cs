@@ -61,25 +61,61 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Suggested Repair: Add gas..
+        ///   Looks up a localized string similar to less than 25 years old.
         /// </summary>
-        internal static string AddGasRepair {
+        internal static string ac1 {
             get {
-                return ResourceManager.GetString("AddGasRepair", resourceCulture);
+                return ResourceManager.GetString("ac1", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Suggested Repair: Adjust timing..
+        ///   Looks up a localized string similar to 25 to 30 years old.
         /// </summary>
-        internal static string AdjustTimingRepair {
+        internal static string ac2 {
             get {
-                return ResourceManager.GetString("AdjustTimingRepair", resourceCulture);
+                return ResourceManager.GetString("ac2", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to What is your age?.
+        ///   Looks up a localized string similar to 31 to 34 years old.
+        /// </summary>
+        internal static string ac3 {
+            get {
+                return ResourceManager.GetString("ac3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 35 to 40 years old.
+        /// </summary>
+        internal static string ac4 {
+            get {
+                return ResourceManager.GetString("ac4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 41 to 50 years old.
+        /// </summary>
+        internal static string ac5 {
+            get {
+                return ResourceManager.GetString("ac5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 51 and above.
+        /// </summary>
+        internal static string ac6 {
+            get {
+                return ResourceManager.GetString("ac6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How old are you?.
         /// </summary>
         internal static string age_question {
             get {
@@ -88,16 +124,169 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Is the battery charged?.
+        ///   Looks up a localized string similar to Less than 200k.
         /// </summary>
-        internal static string BatteryQuestion {
+        internal static string bb01 {
             get {
-                return ResourceManager.GetString("BatteryQuestion", resourceCulture);
+                return ResourceManager.GetString("bb01", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to At least how many bedroom/s you are interested (max. 10)?.
+        ///   Looks up a localized string similar to 200k - 299k.
+        /// </summary>
+        internal static string bb02 {
+            get {
+                return ResourceManager.GetString("bb02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 300k - 399k.
+        /// </summary>
+        internal static string bb03 {
+            get {
+                return ResourceManager.GetString("bb03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 400k - 499k.
+        /// </summary>
+        internal static string bb04 {
+            get {
+                return ResourceManager.GetString("bb04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 500k - 599k.
+        /// </summary>
+        internal static string bb05 {
+            get {
+                return ResourceManager.GetString("bb05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 600k - 699k.
+        /// </summary>
+        internal static string bb06 {
+            get {
+                return ResourceManager.GetString("bb06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 700k - 799k.
+        /// </summary>
+        internal static string bb07 {
+            get {
+                return ResourceManager.GetString("bb07", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 800k - 899k.
+        /// </summary>
+        internal static string bb08 {
+            get {
+                return ResourceManager.GetString("bb08", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 900k - 999k.
+        /// </summary>
+        internal static string bb09 {
+            get {
+                return ResourceManager.GetString("bb09", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.00 Million - 1.49 Million.
+        /// </summary>
+        internal static string bb10 {
+            get {
+                return ResourceManager.GetString("bb10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.50 Million - 1.99 Million.
+        /// </summary>
+        internal static string bb11 {
+            get {
+                return ResourceManager.GetString("bb11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2.00 Million - 2.49 Million.
+        /// </summary>
+        internal static string bb12 {
+            get {
+                return ResourceManager.GetString("bb12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2.50 Million - 2.99 Million.
+        /// </summary>
+        internal static string bb13 {
+            get {
+                return ResourceManager.GetString("bb13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3.00 Million - 3.49 Million.
+        /// </summary>
+        internal static string bb14 {
+            get {
+                return ResourceManager.GetString("bb14", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3.50 Million - 3.99 Million.
+        /// </summary>
+        internal static string bb15 {
+            get {
+                return ResourceManager.GetString("bb15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4.00 Million - 4.49 Million.
+        /// </summary>
+        internal static string bb16 {
+            get {
+                return ResourceManager.GetString("bb16", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4.50 Million - 4.99 Million.
+        /// </summary>
+        internal static string bb17 {
+            get {
+                return ResourceManager.GetString("bb17", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5.00 Million and above.
+        /// </summary>
+        internal static string bb18 {
+            get {
+                return ResourceManager.GetString("bb18", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At least how many bedroom/s are you interested?.
         /// </summary>
         internal static string bedroom_qn {
             get {
@@ -106,7 +295,7 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to What is your budget?.
+        ///   Looks up a localized string similar to How much is your budget?.
         /// </summary>
         internal static string budget {
             get {
@@ -115,7 +304,7 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Is the your first time buying a house?.
+        ///   Looks up a localized string similar to Is this your first time buying a house?.
         /// </summary>
         internal static string buyer_exp {
             get {
@@ -142,52 +331,61 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Suggested Repair: Clean the points..
+        ///   Looks up a localized string similar to Do you have any children?.
         /// </summary>
-        internal static string CleanPointsRepair {
+        internal static string family_qn {
             get {
-                return ResourceManager.GetString("CleanPointsRepair", resourceCulture);
+                return ResourceManager.GetString("family_qn", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Is the conductivity test for the ignition coil positive?.
+        ///   Looks up a localized string similar to Foreigner.
         /// </summary>
-        internal static string CoilQuestion {
+        internal static string fr {
             get {
-                return ResourceManager.GetString("CoilQuestion", resourceCulture);
+                return ResourceManager.GetString("fr", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Suggested Repair: Replace the ignition coil..
+        ///   Looks up a localized string similar to Daily.
         /// </summary>
-        internal static string CoilRepair {
+        internal static string hh1 {
             get {
-                return ResourceManager.GetString("CoilRepair", resourceCulture);
+                return ResourceManager.GetString("hh1", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Suggested Repair: Clean the fuel line..
+        ///   Looks up a localized string similar to Frequent.
         /// </summary>
-        internal static string FuelLineRepair {
+        internal static string hh2 {
             get {
-                return ResourceManager.GetString("FuelLineRepair", resourceCulture);
+                return ResourceManager.GetString("hh2", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Does the tank have any gas in it?.
+        ///   Looks up a localized string similar to Weekly.
         /// </summary>
-        internal static string GasQuestion {
+        internal static string hh3 {
             get {
-                return ResourceManager.GetString("GasQuestion", resourceCulture);
+                return ResourceManager.GetString("hh3", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Next, we also wish to know your frequency of doing housework in a week by your own ?.
+        ///   Looks up a localized string similar to Infrequent.
+        /// </summary>
+        internal static string hh4 {
+            get {
+                return ResourceManager.GetString("hh4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How often do you do housework?.
         /// </summary>
         internal static string housework_qn {
             get {
@@ -196,43 +394,61 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Does the engine knock?.
+        ///   Looks up a localized string similar to East.
         /// </summary>
-        internal static string KnockQuestion {
+        internal static string ll01 {
             get {
-                return ResourceManager.GetString("KnockQuestion", resourceCulture);
+                return ResourceManager.GetString("ll01", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Suggested Repair: Replace the distributor lead wire..
+        ///   Looks up a localized string similar to North East.
         /// </summary>
-        internal static string LeadWireRepair {
+        internal static string ll02 {
             get {
-                return ResourceManager.GetString("LeadWireRepair", resourceCulture);
+                return ResourceManager.GetString("ll02", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to What is your preferred location?.
+        ///   Looks up a localized string similar to East.
         /// </summary>
-        internal static string location_first {
+        internal static string ll03 {
             get {
-                return ResourceManager.GetString("location_first", resourceCulture);
+                return ResourceManager.GetString("ll03", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to What is your preferred location?.
+        ///   Looks up a localized string similar to West.
         /// </summary>
-        internal static string location_old {
+        internal static string ll04 {
             get {
-                return ResourceManager.GetString("location_old", resourceCulture);
+                return ResourceManager.GetString("ll04", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Do you have any maids ? (yes/no)?.
+        ///   Looks up a localized string similar to Central.
+        /// </summary>
+        internal static string ll05 {
+            get {
+                return ResourceManager.GetString("ll05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Where is your preferred location?.
+        /// </summary>
+        internal static string location_qn {
+            get {
+                return ResourceManager.GetString("location_qn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you have any maids?.
         /// </summary>
         internal static string maid_qn {
             get {
@@ -250,20 +466,29 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Suggested Repair: Take your car to a mechanic..
+        ///   Looks up a localized string similar to yes.
         /// </summary>
-        internal static string MechanicRepair {
+        internal static string mm1 {
             get {
-                return ResourceManager.GetString("MechanicRepair", resourceCulture);
+                return ResourceManager.GetString("mm1", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Does the engine misfire?.
+        ///   Looks up a localized string similar to no.
         /// </summary>
-        internal static string MisfireQuestion {
+        internal static string mm2 {
             get {
-                return ResourceManager.GetString("MisfireQuestion", resourceCulture);
+                return ResourceManager.GetString("mm2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to no.
+        /// </summary>
+        internal static string n {
+            get {
+                return ResourceManager.GetString("n", resourceCulture);
             }
         }
         
@@ -277,56 +502,29 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Suggested Repair: None..
+        ///   Looks up a localized string similar to Permanent Resident.
         /// </summary>
-        internal static string NoRepair {
+        internal static string pr {
             get {
-                return ResourceManager.GetString("NoRepair", resourceCulture);
+                return ResourceManager.GetString("pr", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Is the output of the engine low?.
+        ///   Looks up a localized string similar to Less than 3 years.
         /// </summary>
-        internal static string OutputQuestion {
+        internal static string prr1 {
             get {
-                return ResourceManager.GetString("OutputQuestion", resourceCulture);
+                return ResourceManager.GetString("prr1", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Suggested Repair: Adjust point gap..
+        ///   Looks up a localized string similar to 3 years and more.
         /// </summary>
-        internal static string PointGapRepair {
+        internal static string prr2 {
             get {
-                return ResourceManager.GetString("PointGapRepair", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to What is the surface state of the points?.
-        /// </summary>
-        internal static string PointsQuestion {
-            get {
-                return ResourceManager.GetString("PointsQuestion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Suggested Repair: Charge the battery..
-        /// </summary>
-        internal static string ReplaceBatteryRepair {
-            get {
-                return ResourceManager.GetString("ReplaceBatteryRepair", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Suggested Repair: Replace the points..
-        /// </summary>
-        internal static string ReplacePointsRepair {
-            get {
-                return ResourceManager.GetString("ReplacePointsRepair", resourceCulture);
+                return ResourceManager.GetString("prr2", resourceCulture);
             }
         }
         
@@ -340,29 +538,74 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Does the engine rotate?.
+        ///   Looks up a localized string similar to 1 room.
         /// </summary>
-        internal static string RotateQuestion {
+        internal static string rr1 {
             get {
-                return ResourceManager.GetString("RotateQuestion", resourceCulture);
+                return ResourceManager.GetString("rr1", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Does the engine run normally?.
+        ///   Looks up a localized string similar to 2 rooms.
         /// </summary>
-        internal static string RunQuestion {
+        internal static string rr2 {
             get {
-                return ResourceManager.GetString("RunQuestion", resourceCulture);
+                return ResourceManager.GetString("rr2", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Is the engine sluggish?.
+        ///   Looks up a localized string similar to 3 rooms.
         /// </summary>
-        internal static string SluggishQuestion {
+        internal static string rr3 {
             get {
-                return ResourceManager.GetString("SluggishQuestion", resourceCulture);
+                return ResourceManager.GetString("rr3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4 rooms.
+        /// </summary>
+        internal static string rr4 {
+            get {
+                return ResourceManager.GetString("rr4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5 rooms.
+        /// </summary>
+        internal static string rr5 {
+            get {
+                return ResourceManager.GetString("rr5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to More than 5 Rooms.
+        /// </summary>
+        internal static string rr6 {
+            get {
+                return ResourceManager.GetString("rr6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Singaporean.
+        /// </summary>
+        internal static string sc {
+            get {
+                return ResourceManager.GetString("sc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you plan to get married in the near future?.
+        /// </summary>
+        internal static string single_qn {
+            get {
+                return ResourceManager.GetString("single_qn", resourceCulture);
             }
         }
         
@@ -376,7 +619,7 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Perhaps, you like to jogging or gym ?.
+        ///   Looks up a localized string similar to Perhaps, you like to jog, gym or swim?.
         /// </summary>
         internal static string sport_gym {
             get {
@@ -385,7 +628,7 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Then, do you badminton, squash or tennis?.
+        ///   Looks up a localized string similar to Then, do you play badminton, squash or tennis?.
         /// </summary>
         internal static string sport_racket {
             get {
@@ -403,7 +646,7 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Is your spouse obtained his/her Singapore Permanent Residence for more than 3 years?.
+        ///   Looks up a localized string similar to Has your spouse obtained his/her Singapore Permanent Residence for more than 3 years?.
         /// </summary>
         internal static string spouse_residency {
             get {
@@ -412,11 +655,83 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Does the engine start?.
+        ///   Looks up a localized string similar to Racquet Sport.
         /// </summary>
-        internal static string StartQuestion {
+        internal static string ss1 {
             get {
-                return ResourceManager.GetString("StartQuestion", resourceCulture);
+                return ResourceManager.GetString("ss1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Basketball.
+        /// </summary>
+        internal static string ss2 {
+            get {
+                return ResourceManager.GetString("ss2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Neither.
+        /// </summary>
+        internal static string ss3 {
+            get {
+                return ResourceManager.GetString("ss3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Badminton.
+        /// </summary>
+        internal static string ss4 {
+            get {
+                return ResourceManager.GetString("ss4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Squash.
+        /// </summary>
+        internal static string ss5 {
+            get {
+                return ResourceManager.GetString("ss5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tennis.
+        /// </summary>
+        internal static string ss6 {
+            get {
+                return ResourceManager.GetString("ss6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jogging.
+        /// </summary>
+        internal static string ss7 {
+            get {
+                return ResourceManager.GetString("ss7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gym.
+        /// </summary>
+        internal static string ss8 {
+            get {
+                return ResourceManager.GetString("ss8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pool.
+        /// </summary>
+        internal static string ss9 {
+            get {
+                return ResourceManager.GetString("ss9", resourceCulture);
             }
         }
         
@@ -430,6 +745,15 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to yes.
+        /// </summary>
+        internal static string y {
+            get {
+                return ResourceManager.GetString("y", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Yes.
         /// </summary>
         internal static string Yes {
@@ -439,7 +763,7 @@ namespace HousingRecommendationSystem.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You have any preference on the year of completion for the house?.
+        ///   Looks up a localized string similar to Do you mind an older estate? (Year of Completion &gt; 15 years).
         /// </summary>
         internal static string yr_complete {
             get {
